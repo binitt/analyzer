@@ -2,3 +2,5 @@ pydriller
 radon 
 lizard 
 pandas
+scikit-learn
+joblib
