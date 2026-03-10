@@ -6,7 +6,7 @@ The dataset can be used for machine learning models that predict which files are
 
 ---
 
-## Run
+## Run.
 
 ```bash
 python analyzer/feature-extractor.py
