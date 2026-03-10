@@ -4,3 +4,4 @@ lizard
 pandas
 scikit-learn
 joblib
+xgboost
