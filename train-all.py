@@ -11,6 +11,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
+from sklearn.neural_network import MLPClassifier
 
 from xgboost import XGBClassifier
 import joblib
@@ -49,7 +50,6 @@ print("Class distribution:", {0: neg, 1: pos})
 
 
 models = {
-
     "naive_bayes":
         GaussianNB(),
 
@@ -79,6 +79,15 @@ models = {
             eval_metric="logloss",
             random_state=42,
             n_jobs=-1
+        ),
+
+    "neural_network":
+        MLPClassifier(
+            hidden_layer_sizes=(128, 64, 32),
+            activation="relu",
+            solver="adam",
+            max_iter=300,
+            random_state=42
         )
 }
 
