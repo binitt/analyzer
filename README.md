@@ -190,4 +190,22 @@ Possible extensions include:
 * additional complexity metrics
 
 ---
-"testing by sauvik"
+
+# LangGraph
+
+## Start Ollama locally
+
+Download and start ollama
+```
+mkdir llm
+export OLLAMA_MODELS=./llm
+export OLLAMA_HOST=0.0.0.0
+ollama pull tinyllama
+ollama serve
+```
+
+Expose to public with ngrok
+```
+ngrok http http://localhost:11434
+```
+
